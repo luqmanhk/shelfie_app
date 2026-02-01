@@ -1,14 +1,33 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { Stack } from 'expo-router'
 
 const RootLayout = () => {
   return (
-    <View style = {{ flex: 1 }}>
-      <Text>Footer</Text>
-    </View>
+    < Stack screenOptions = {{
+      headerStyle: { backgroundColor: '#ddd' },
+      headerTintColor: "#333"
+    }}> 
+      <Stack.Screen name = "index" options = {{ title: 'Home'}}/>
+      <Stack.Screen name = "about" options = {{ title: 'About Us'}}/>
+      <Stack.Screen name = "contact" options = {{ title: 'Contact Us', headerShown: false }}/>
+    </Stack>
+
   )
 }
 
 export default RootLayout
 
 const styles = StyleSheet.create({})
+
+
+/*
+Stack:
+|
+| |
+| |
+| |contact
+| |about
+| |index
+-----
+*/
