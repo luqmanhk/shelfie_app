@@ -1,8 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, useColorScheme, View } from 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router'
+import { Colors } from "../constants/colors"
 
 const RootLayout = () => {
+  const colorScheme = useColorScheme()
+  const theme = colors[colorScheme]
+
   return (
     < Stack screenOptions = {{
       headerStyle: { backgroundColor: '#ddd' },
