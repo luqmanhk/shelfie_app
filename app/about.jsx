@@ -5,12 +5,8 @@ import { Link } from 'expo-router'
 import { Colors } from "../constants/colors"
 
 const About = () => {
-  const colorScheme = useColorScheme()
-    const theme = Colors[colorScheme] ?? Colors.light
-
-
   return (
-    <View style = {[styles.container, { backgroundColor: theme.background }]}>
+    <View style = {styles.container}>
       <Text style = {styles.title}>About Page</Text>
 
       <Link href = "/" style = {styles.link} >Go Back Home</Link>
