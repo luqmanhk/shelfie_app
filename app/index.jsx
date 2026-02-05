@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, } from 'react-native'
 import { Link } from 'expo-router'
 
 import Logo from '../assets/shelfie.png'
@@ -6,11 +6,12 @@ import Logo from '../assets/shelfie.png'
 // themed components
 import ThemedView from '../components/ThemedView'
 import React from 'react'
+import ThemedLogo from '../components/ThemedLogo'
 
 const Home = () => {
   return (
     <ThemedView style = {styles.container}>
-        <Image source = {Logo} style = {styles.img} />
+        <ThemedLogo style = {styles.img} />
         
       <Text style = {styles.title}>The Number 1</Text>
       
